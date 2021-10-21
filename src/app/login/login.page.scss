@@ -1,0 +1,21 @@
+ion-grid {
+  height: 100% !important;
+}
+
+ion-row {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  height: 100% !important;
+}
+
+.desconectado {
+  animation: disabled 4s infinite;
+}
+
+@keyframes disabled {
+  0%   {background-color: red;}
+  25%  {background-color: white;}
+  50%  {background-color: red;}
+  100% {background-color: white;}
+}

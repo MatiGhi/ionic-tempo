@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar class="fondo">
+    <ion-title>
+      <div class="ion-text-center">
+        <h3>Mis pedidos</h3>
+      </div>
+    </ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item class="fondo-encabezado">
+      <div class="ion-text-center">
+        Puedes ver todos los pedidos realizados y acceder al perfil de cada restaurante.
+      </div>
+    </ion-item>
+    <ion-item>
+      <ion-label [routerLink]="['/detalle-pedido']">
+        <h2>BurgaZone</h2>
+        <h4><ion-icon name="location-outline"></ion-icon>C/ Avenida Antonio Huertas, 24</h4>
+        <div>
+          <!-- <ion-label> -->
+            <label class="fecha-hora">16/04/2020 - 20:41</label>
+            <ion-note class="likes">
+              <ion-icon name="happy-outline" class="ion-text-end"></ion-icon>339
+              <ion-icon name="happy-outline" class="ion-text-end"></ion-icon>226
+            </ion-note>
+            <label class="ion-text-end price">$25,60</label>
+          <!-- </ion-label> -->
+        </div>
+      </ion-label>
+      <ion-icon name="arrow-forward-outline"></ion-icon>
+    </ion-item>
+  </ion-list>
+</ion-content>

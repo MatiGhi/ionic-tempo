@@ -1,0 +1,33 @@
+.fondo {
+    --background: #005f93 !important;
+    color: white;
+}
+.fondo > ion-title > div {
+    margin-left: -40px !important;
+}
+
+h6 {
+    margin-top: -10px;
+    font-size: 13px;
+}
+
+div > h4, p {
+    color: #005f93;
+    font-weight: bolder;
+}
+
+div > h5 {
+    color: #005f93;
+}
+
+.mt-less-10 {
+    margin-top: -8px;
+}
+
+.content-title {
+    height: 25px;
+}
+
+.content-title > ion-label {
+    margin-top: -10px;
+}

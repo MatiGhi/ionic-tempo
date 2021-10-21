@@ -1,0 +1,95 @@
+<ion-header>
+  <ion-toolbar class="fondo">
+    <ion-title>
+      <div class="ion-text-center">
+        <h3>Nombre del restaurante</h3>
+      </div>
+    </ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-content>
+      <div id="map"></div>
+    </ion-card-content>
+  </ion-card>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12">
+        <ion-item lines="full">
+          <ion-label>
+            <b>Información</b>
+          </ion-label>
+          <ion-label (click)="navegar()" class="ion-text-end">
+            <span>Cómo llegar</span>
+          </ion-label>
+        </ion-item>
+      </ion-col>
+     <!--  <ion-col size="6">
+        <ion-item>
+          <ion-label>
+            <b>Información</b>
+          </ion-label>
+        </ion-item>
+      </ion-col>
+      <ion-col size="6">
+        <ion-item (click)="navegar()" class="ion-text-end">
+          <ion-label>
+            <span>Cómo llegar</span>
+          </ion-label>
+        </ion-item>
+      </ion-col> -->
+
+      <ion-col size="12">
+        <ion-item (click)="llamar()" lines="full">
+          <ion-icon name="call-outline"></ion-icon>
+          <ion-label>
+            <b>912 993 220</b>
+          </ion-label>
+        </ion-item>
+      </ion-col>
+      <ion-col size="12">
+        <ion-item lines="full">
+          <ion-icon name="location-outline"></ion-icon>
+          <ion-label>
+            Calle Oriente 46, 13700, Tomelloso
+          </ion-label>
+        </ion-item>
+      </ion-col>
+      <ion-col size="12">
+        <ion-item lines="none">
+          <ion-label size="12">
+            <h2><ion-icon name="time-outline"></ion-icon><b> Domingo</b></h2>
+            <p>10:00 - 12:00</p>
+            <p>19:00 - 21:00</p>
+          </ion-label>
+        </ion-item>
+      </ion-col>
+      <ion-col size="12">
+        <ion-item lines="none">
+          <ion-label>
+            <h2><ion-icon name="time-outline"></ion-icon><b> Sábado</b></h2>
+            <p>10:00 - 17:00</p>
+          </ion-label>
+        </ion-item>
+      </ion-col>
+      <ion-col size="12">
+        <ion-item lines="none">
+          <ion-label>
+            <h2><ion-icon name="time-outline"></ion-icon><b> Lunes a Viernes</b></h2>
+            <p>8:00 - 15:00</p>
+          </ion-label>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="12">
+        <ion-button expand="full" class="fondo">Realizar reserva</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

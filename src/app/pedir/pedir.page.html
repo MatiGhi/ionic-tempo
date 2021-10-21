@@ -1,0 +1,59 @@
+<ion-header>
+  <ion-toolbar>
+    <!-- <ion-title>sidebar</ion-title> -->
+    <ion-buttons slot="start">
+      <ion-menu-button autoHide="false" [routerLink]="['/ajustes']">
+        <ion-icon name="settings-outline"></ion-icon>
+      </ion-menu-button>
+    </ion-buttons>
+    <ion-buttons slot="primary">
+      <ion-button>
+        <ion-icon slot="icon-only" name="notifications-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <div class="ion-text-center">
+      <h3>Tempo</h3>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="ion-text-center ion-margin-top">
+    <ion-chip color="primary">
+      <ion-avatar>
+        <img
+          src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48cGF0aCBmaWxsPSIjYzVkYmZmIiBkPSJNMCAwaDUxMnY1MTJIMHoiLz48cGF0aCBkPSJNMjU2IDMwNGM2MS42IDAgMTEyLTUwLjQgMTEyLTExMlMzMTcuNiA4MCAyNTYgODBzLTExMiA1MC40LTExMiAxMTIgNTAuNCAxMTIgMTEyIDExMnptMCA0MGMtNzQuMiAwLTIyNCAzNy44LTIyNCAxMTJ2NTZoNDQ4di01NmMwLTc0LjItMTQ5LjgtMTEyLTIyNC0xMTJ6IiBmaWxsPSIjODJhZWZmIi8+PC9zdmc+" />
+      </ion-avatar>
+      <ion-label>Tienes un pedido en marcha...</ion-label>
+    </ion-chip>
+  </div>
+
+
+  <div class="ion-text-center qrTop">
+    <ion-grid>
+      <ion-row>
+        <ion-col size="8" offset="2">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/6/65/QR_code_for_QRpedia.png" />
+          <section>
+            <ion-button expand="block" (click)="readQRCode()">Escanea y haz tu pedido</ion-button>
+          </section>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+
+
+  <div class="ion-text-center">
+    <ion-input placeholder="Escribir Código" class="ion-text-center"></ion-input>
+  </div>
+
+  <div class="ion-text-center" *ngIf="scannedCode">
+    <ion-chip outline color="primary">
+      <ion-icon name="qr-code-outline"></ion-icon>
+      <ion-label>{{scannedCode}}</ion-label>
+      <ion-icon name="close-circle" (click)="delete()"></ion-icon>
+    </ion-chip>
+  </div>
+
+</ion-content>

@@ -1,0 +1,52 @@
+<ion-backdrop *ngIf="conectado"></ion-backdrop>
+
+<ion-header [translucent]="true">
+
+  <ion-toolbar>
+    <ion-buttons slot="primary">
+      <ion-button>
+        <ion-icon *ngIf="conectado" class="desconectado" slot="icon-only" name="wifi-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <div class="ion-text-center">
+      <h3>Login</h3>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-grid>
+    <ion-row>
+      <form #loginForm="ngForm">
+        <ion-col size="8" offset="2">
+          <ion-item>
+            <ion-label position="floating">Usuario</ion-label>
+            <ion-input type="usuario" name="usuario" id="usuario" #usuario="ngModel" [(ngModel)]="user.usuario" required>
+            </ion-input>
+          </ion-item>
+          <small *ngIf="!usuario.valid && usuario.touched" class="invalid-feedback d-block">El usuario no es válido.</small>
+        </ion-col>
+        <ion-col size="8" offset="2">
+          <ion-item>
+            <ion-label position="floating">Password</ion-label>
+            <ion-input type="password" name="password" id="password" #password="ngModel" [(ngModel)]="user.password"
+              required></ion-input>
+          </ion-item>
+          <small *ngIf="!password.valid && password.touched" class="invalid-feedback d-block">La password no es
+            válida.</small>
+        </ion-col>
+        <ion-col size="8" offset="4">
+          <ion-button color="primary" (click)="onSubmit()">Login</ion-button>
+          <!-- <ion-button color="primary" [disabled]="conectado" (click)="onSubmit()">Login</ion-button> -->
+        </ion-col>
+        <ion-col>
+          <ion-item>
+            <ion-label color="danger" *ngIf="error">{{error.data}}</ion-label>
+          </ion-item>
+        </ion-col>
+      </form>
+    </ion-row>
+  </ion-grid>
+
+
+</ion-content>

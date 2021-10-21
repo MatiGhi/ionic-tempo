@@ -1,0 +1,12 @@
+.options-rs{
+    display: flex; 
+    height: 50px; 
+    width: 100%;    
+    overflow-x: auto;
+}
+
+.options-rs ion-chip{
+    box-shadow:  3px 3px 7px 0px rgba(134, 134, 134, 0.20);
+    background-color: white;
+    justify-content: center;
+}

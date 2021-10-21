@@ -1,0 +1,95 @@
+<ion-header>
+  <ion-toolbar class="fondo">
+    <ion-title>
+      <div class="ion-text-center">
+        <h3>Ajustes</h3>
+      </div>
+    </ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item [routerLink]="['/mis-pedidos']" lines="none">
+      <ion-label><ion-icon name="cart-outline"></ion-icon> Mis pedidos</ion-label>
+      <ion-icon name="arrow-forward-outline"></ion-icon>
+    </ion-item>
+
+    <ion-item lines="none">
+      <ion-label><ion-icon name="person-outline"></ion-icon> Mis datos personales</ion-label>
+      <ion-icon name="arrow-forward-outline"></ion-icon>
+    </ion-item>
+  
+    <ion-item lines="none">
+      <ion-label><ion-icon name="card-outline"></ion-icon> Métodos de pago</ion-label>
+      <ion-icon name="arrow-forward-outline"></ion-icon>
+    </ion-item>
+    
+    <ion-item lines="none">
+      <ion-label>Tempo Plus</ion-label>
+      <ion-icon name="arrow-forward-outline"></ion-icon>
+    </ion-item>
+
+    <ion-item lines="none">
+      <ion-label>Crédito en cuenta</ion-label>
+      <ion-icon name="arrow-forward-outline"></ion-icon>
+    </ion-item>
+
+    <ion-item lines="none">
+      <ion-label>Código promocional</ion-label>
+      <ion-icon name="arrow-forward-outline"></ion-icon>
+    </ion-item>
+
+    <ion-item lines="none">
+      <ion-label>Invitar a un amigo</ion-label>
+      <ion-icon name="arrow-forward-outline"></ion-icon>
+    </ion-item>
+
+    <ion-item lines="none">
+      <ion-label>Preguntas frecuentes</ion-label>
+      <ion-icon name="arrow-forward-outline"></ion-icon>
+    </ion-item>
+
+    <ion-item lines="none">
+      <ion-label><ion-icon name="notifications-outline"></ion-icon> Social</ion-label>
+      <ion-icon name="arrow-forward-outline"></ion-icon>
+    </ion-item>
+
+    <ion-item lines="none">
+      <ion-label>Valora a Tempo</ion-label>
+      <ion-icon name="arrow-forward-outline"></ion-icon>
+    </ion-item>
+
+  </ion-list>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col size="2" offset="2">
+        <ion-avatar class="ion-margin-start">
+          <ion-icon name="logo-instagram"></ion-icon>
+        </ion-avatar>
+      </ion-col>
+      <ion-col size="2" offset="1">
+        <ion-avatar class="ion-margin-start">
+          <ion-icon name="logo-facebook"></ion-icon>
+        </ion-avatar>
+      </ion-col>
+      <ion-col size="2" offset="1">
+        <ion-avatar class="ion-margin-start">
+          <ion-icon name="logo-twitter"></ion-icon>
+        </ion-avatar>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <div class="ion-text-center less-mt-25">
+    <ion-chip outline (click)="logout()">
+      <ion-label>Cerrar sesión</ion-label>
+    </ion-chip>
+  </div>
+  <div class="ion-text-center user-email">
+      <ion-label>Conectado como j4rk0r@gmail.com</ion-label>
+  </div>
+</ion-content>

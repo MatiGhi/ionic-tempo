@@ -1,0 +1,8 @@
+{
+  "name": "tempo",
+  "integrations": {
+    "capacitor": {},
+    "cordova": {}
+  },
+  "type": "angular"
+}
